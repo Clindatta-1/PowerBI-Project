@@ -1,0 +1,35 @@
+{
+  "name": "Sales Analytics Theme",
+  "dataColors": [
+    "#2E86AB",
+    "#F6AE2D",
+    "#F26419",
+    "#33658A",
+    "#86BBD8",
+    "#758E4F",
+    "#C84B31",
+    "#A23B72"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#252423",
+  "tableAccent": "#2E86AB",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "fontFamily": [{ "value": "Segoe UI" }],
+        "fontSize": [{ "value": 11 }]
+      }
+    },
+    "card": {
+      "*": {
+        "calloutValue": [{ "fontSize": 28, "fontBold": true }],
+        "label": [{ "fontSize": 12, "color": { "solid": { "color": "#605E5C" } } }]
+      }
+    },
+    "columnChart": {
+      "*": {
+        "dataPoint": [{ "defaultColor": { "solid": { "color": "#2E86AB" } } }]
+      }
+    }
+  }
+}

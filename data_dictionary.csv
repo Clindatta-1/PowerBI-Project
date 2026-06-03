@@ -1,0 +1,22 @@
+field_name,data_type,description,example_value,notes
+order_id,Text,Unique identifier for each order,ORD-2022-0001,Format: ORD-YYYY-NNNN
+order_date,Date,Date the order was placed,2022-01-03,Format: YYYY-MM-DD. Use as primary date dimension.
+ship_date,Date,Date the order was shipped,2022-01-07,Format: YYYY-MM-DD. Difference from order_date = fulfilment days.
+customer_id,Text,Unique identifier for each customer,CUST-001,One customer can have many orders.
+customer_name,Text,Full name of the customer,James Harrison,May be anonymised in shared reports.
+customer_segment,Text,Customer classification,Corporate,"Values: Consumer, Corporate, Home Office"
+region,Text,US sales region,East,"Values: East, West, South, Central"
+country,Text,Country of the customer,United States,Expand with ISO country codes for international datasets.
+state,Text,US state of the customer,New York,Standard US state names.
+city,Text,City of the customer,New York City,Useful for map visuals.
+product_id,Text,Unique identifier for each product,PROD-101,One product can appear in many orders.
+product_name,Text,Full product name,HP Laptop 15,Descriptive name as shown in catalogue.
+category,Text,Top-level product category,Technology,"Values: Technology, Furniture, Office Supplies"
+sub_category,Text,Second-level product category,Computers,"Examples: Computers, Chairs, Paper, Accessories, Printers, Phones, Monitors, Tables, Storage, Labels, Art"
+quantity,Integer,Number of units ordered,2,Always a positive integer.
+unit_price,Decimal,Listed price per unit in USD,899.99,Price before discount applied.
+discount,Decimal,Discount fraction applied to the order,0.10,"Range: 0.00 to 1.00. Multiply by 100 for percentage. E.g. 0.10 = 10%."
+sales,Decimal,Actual revenue after discount in USD,1619.98,"Formula: quantity × unit_price × (1 - discount). Primary revenue metric."
+profit,Decimal,Gross profit on the order in USD,324.00,Calculated as sales × profit_margin / 100.
+profit_margin,Decimal,Profit margin percentage,20.0,"Range: 0 to 100. Use to filter low-margin orders. Higher is better."
+sales_rep,Text,Name of the sales representative responsible for the order,Sarah Mitchell,Use to build sales performance dashboards.
